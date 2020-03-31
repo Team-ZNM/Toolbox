@@ -1,0 +1,2 @@
+# JavaScript
+JS脚本
