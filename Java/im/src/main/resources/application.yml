@@ -1,0 +1,8 @@
+server:
+    port: 8080
+
+spring:
+    profiles:
+        include: jdbc
+    application:
+        name: im
