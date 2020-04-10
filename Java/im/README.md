@@ -4,7 +4,7 @@
 
 * Spring boot 2.x
 * mybatis plus 3.x
-* netty-socketio
+* netty-socketio 4.1x
 * shiro
 * PC 端 vue Element 
 * 移动端H5 vue cube-ui 

@@ -1,5 +1,6 @@
 package com.im;
 
+import com.im.ImApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
