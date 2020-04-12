@@ -2,8 +2,13 @@ server:
     port: 8080
     servlet:
         context-path: /im
+
 spring:
     profiles:
         include: jdbc
     application:
         name: im
+    mvc:
+      view:
+        prefix: /
+        suffix: .html

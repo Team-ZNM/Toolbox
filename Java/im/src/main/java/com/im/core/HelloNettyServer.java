@@ -1,7 +1,13 @@
-package com.im.business.util;
+package com.im.core;
 
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+
+//实现客户端发送请求，服务器端会返回Hello Netty
 public class HelloNettyServer {
-
     public static void main(String[] args) throws InterruptedException {
         /**
          * 定义一对线程组（两个线程池）
@@ -56,6 +62,4 @@ public class HelloNettyServer {
 
 
     }
-
-
 }

@@ -26,4 +26,8 @@ public class UserController {
         return "hello world";
     }
 
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
 }
