@@ -26,3 +26,6 @@
 * personAssoc 用户关系表
 * groupAssoc 用户与群组关系表
 * roomAssoc 用户与聊天室关系表
+
+### 进度
+netty核心已经添加 后续在此基础演化
