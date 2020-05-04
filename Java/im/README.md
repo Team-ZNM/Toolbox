@@ -6,13 +6,13 @@
 * mybatis plus 3.x
 * netty-socketio 4.1x
 * shiro
-* PC 端 vue Element 
+* PC 端 vue Element (暂时先用HTML+JQuery)
 * 移动端H5 vue cube-ui 
 * Android
 #
 ### IM功能
 * 一对一聊天
-* 群组聊天
+* 群组聊天 
 * 聊天室聊天
 * 搜索用户
 * 加\删好友
