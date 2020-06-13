@@ -8,7 +8,22 @@ spring:
         include: jdbc
     application:
         name: im
+    #resources:
+    #  static-locations: classpath:templates/
     mvc:
-      view:
-        prefix: /
-        suffix: .html
+      #view:
+      #  prefix: /html/
+      #  suffix: .ftl
+      static-path-pattern: /static/**
+    freemarker:
+      template-loader-path: classpath:/templates
+      allow-request-override: false
+      allow-session-override: false
+      cache: false
+      check-template-location: true
+      content-type: text/html
+      expose-request-attributes: false
+      expose-session-attributes: false
+      expose-spring-macro-helpers: false
+      suffix: .ftl
+      charset: utf-8
