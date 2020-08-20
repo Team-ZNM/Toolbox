@@ -7,7 +7,7 @@
     </script>
 </head>
 <body>
-<div >发送消息：</div><br>
+<div >${token!}发送消息：</div><br>
 <input type="text" name="messageContent" id="messageContent"/>
 <input type="button" name="" id="seed" value="发送" onclick="chat()"/>
 

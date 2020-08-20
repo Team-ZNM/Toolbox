@@ -27,3 +27,12 @@ spring:
       expose-spring-macro-helpers: false
       suffix: .ftl
       charset: utf-8
+logging:
+  level:
+    root: info
+  path: D:/logs
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %clr(%logger){cyan} %clr(%msg%n){green}"
+    file: "%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n"
+  file:
+    max-size: 10MB

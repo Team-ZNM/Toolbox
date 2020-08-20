@@ -1,42 +1,83 @@
 package com.im.business.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+import java.util.List;
+import org.springframework.security.core.userdetails.UserDetails;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author Godlys
- * @since 2020-04-07
- */
-@Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-public class User implements Serializable {
+public class User implements UserDetails, Serializable {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
-     * 用户id，主键
-     */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
-
-    /**
-     * 用户名
-     */
-    private String useName;
-
-    /**
-     * 用户密码
-     */
+    private Long id;
+    private String username;
     private String password;
 
+    private List<Role> authorities;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public List<Role> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(List<Role> authorities) {
+        this.authorities = authorities;
+    }
+
+    /**
+     * 用户账号是否过期
+     */
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    /**
+     * 用户账号是否被锁定
+     */
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    /**
+     * 用户密码是否过期
+     */
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    /**
+     * 用户是否可用
+     */
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 
 }
